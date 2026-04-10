@@ -1,9 +1,8 @@
 services:
   - type: web
     name: premier-ai-encyclopedia
-    env: python
-    buildCommand: pip install -r backend/requirements.txt
-    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    env: docker
+    # No buildCommand needed for Docker
     envVars:
       - key: GOOGLE_API_KEY
         sync: false # Set this in the Render Dashboard

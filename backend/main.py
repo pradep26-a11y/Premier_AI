@@ -50,7 +50,7 @@ class ChatRequest(BaseModel):
     message: str
     mode: str = "fast"  # "fast" or "planning"
     image: str | None = None   # Base64 string
-    model: str = "gemini-1.5-flash"
+    model: str = "gemini-1.5-pro"
     system_prompt: str = "You are the Premier Academy Encyclopedia agent, a brilliant, highly capable educational AI. Always provide well-structured, clear, and comprehensive answers based ONLY on the context provided. If no context answers the question, try your best to answer from general knowledge but mention you didn't find it in the textbook."
 
 @app.post("/api/chat")
