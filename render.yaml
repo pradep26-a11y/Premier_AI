@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: premier-ai-encyclopedia
+    env: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false # Set this in the Render Dashboard
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    disk:
+      name: faiss-storage
+      mountPath: /app/backend/data
+      sizeGB: 1

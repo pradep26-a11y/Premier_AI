@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+requests
+pydantic
+faiss-cpu
+numpy
+pypdf
+python-multipart
+google-genai
+python-dotenv
+Pillow
